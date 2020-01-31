@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6dc62f90-4a12-4894-93d0-41ad83af31eb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/lib/go-1.10" />
+  <component name="ProjectId" id="1X9QoYLOq27ganr2WjuEuNbG4HX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Server" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RunManager" selected="Go Build.go build ReflectDemo (1)">
+    <configuration name="go build FeildandMethod.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Reflect" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/FeildandMethod.go" />
+      <package value="ReflectDemo" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build Reflect (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Reflect" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/reflect1.go" />
+      <package value="Reflect" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build ReflectDemo (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Reflect" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/ReflectSet.go" />
+      <package value="ReflectDemo" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build ReflectDemo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Reflect" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/ReflectCall.go" />
+      <package value="ReflectDemo" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build reflect1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Reflect" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/reflect1.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build ReflectDemo (1)" />
+        <item itemvalue="Go Build.go build ReflectDemo" />
+        <item itemvalue="Go Build.go build FeildandMethod.go" />
+        <item itemvalue="Go Build.go build reflect1.go" />
+        <item itemvalue="Go Build.go build Reflect (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="541" y="84" width="828" height="942" key="#go_build_Reflect" timestamp="1580456332039">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="541" y="84" width="828" height="942" key="#go_build_Reflect/0.27.1920.1053@0.27.1920.1053" timestamp="1580456332039" />
+    <state x="536" y="97" width="837" height="912" key="#go_build_ReflectDemo" timestamp="1580458682970">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="536" y="97" width="837" height="912" key="#go_build_ReflectDemo/0.27.1920.1053@0.27.1920.1053" timestamp="1580458682970" />
+    <state x="536" y="97" width="837" height="912" key="#go_build_ReflectDemo_(1)" timestamp="1580460021771">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="536" y="97" width="837" height="912" key="#go_build_ReflectDemo_(1)/0.27.1920.1053@0.27.1920.1053" timestamp="1580460021771" />
+    <state x="688" y="258" width="556" height="594" key="FileChooserDialogImpl" timestamp="1580471043422">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="688" y="258" width="556" height="594" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1580471043422" />
+    <state width="1852" height="173" key="GridCell.Tab.0.bottom" timestamp="1580460022194">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="173" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1580460022194" />
+    <state width="1852" height="173" key="GridCell.Tab.0.center" timestamp="1580460022193">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="173" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1580460022193" />
+    <state width="1852" height="173" key="GridCell.Tab.0.left" timestamp="1580460022193">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="173" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1580460022193" />
+    <state width="1852" height="173" key="GridCell.Tab.0.right" timestamp="1580460022193">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="173" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1580460022193" />
+    <state width="1852" height="325" key="GridCell.Tab.1.bottom" timestamp="1580458261257">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="325" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1580458261257" />
+    <state width="1852" height="325" key="GridCell.Tab.1.center" timestamp="1580458261257">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="325" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1580458261257" />
+    <state width="1852" height="325" key="GridCell.Tab.1.left" timestamp="1580458261256">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="325" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1580458261256" />
+    <state width="1852" height="325" key="GridCell.Tab.1.right" timestamp="1580458261257">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="325" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1580458261257" />
+    <state x="303" y="103" key="SettingsEditor" timestamp="1580456393094">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="303" y="103" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1580456393094" />
+  </component>
+</project>

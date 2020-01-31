@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="24f4163f-77e3-4f91-a578-e2b29bebd0a2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/lib/go-1.12" />
+  <component name="ProjectId" id="1WCazFcAe8qy3QPTfdpnIxmHNAP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RunManager" selected="Go Build.go build rwmutex.go">
+    <configuration name="go build mutex.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="goroutine" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/mutex.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build rwmutex.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="goroutine" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/rwmutex.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build soldtickets.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="goroutine" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/soldtickets.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build text.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="goroutine" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/text.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build waitgroup.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="goroutine" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/waitgroup.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build rwmutex.go" />
+        <item itemvalue="Go Build.go build mutex.go" />
+        <item itemvalue="Go Build.go build soldtickets.go" />
+        <item itemvalue="Go Build.go build text.go" />
+        <item itemvalue="Go Build.go build waitgroup.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="636" y="156" width="705" height="784" key="#go_build_gohello.go" timestamp="1579497377819">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="636" y="126" key="#go_build_gohello.go/0.0.1920.1026@0.0.1920.1026" timestamp="1578656360675" />
+    <state x="636" y="156" width="705" height="784" key="#go_build_gohello.go/0.27.1920.1053@0.27.1920.1053" timestamp="1579497377819" />
+    <state x="726" y="273" width="515" height="545" key="EnvironmentVariablesDialog" timestamp="1579497349052">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="726" y="273" width="515" height="545" key="EnvironmentVariablesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1579497349052" />
+    <state x="688" y="299" width="424" height="480" key="FileChooserDialogImpl" timestamp="1579497376654">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="688" y="265" key="FileChooserDialogImpl/0.0.1920.1026@0.0.1920.1026" timestamp="1578736906508" />
+    <state x="688" y="299" width="424" height="480" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1579497376654" />
+    <state width="1864" height="337" key="GridCell.Tab.0.bottom" timestamp="1579500386201">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1868" height="98" key="GridCell.Tab.0.bottom/0.0.1920.1026@0.0.1920.1026" timestamp="1578742778041" />
+    <state width="1864" height="337" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1579500386201" />
+    <state width="1864" height="337" key="GridCell.Tab.0.center" timestamp="1579500386200">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1868" height="98" key="GridCell.Tab.0.center/0.0.1920.1026@0.0.1920.1026" timestamp="1578742778041" />
+    <state width="1864" height="337" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1579500386200" />
+    <state width="1864" height="337" key="GridCell.Tab.0.left" timestamp="1579500386199">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1868" height="98" key="GridCell.Tab.0.left/0.0.1920.1026@0.0.1920.1026" timestamp="1578742778041" />
+    <state width="1864" height="337" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1579500386199" />
+    <state width="1864" height="337" key="GridCell.Tab.0.right" timestamp="1579500386201">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1868" height="98" key="GridCell.Tab.0.right/0.0.1920.1026@0.0.1920.1026" timestamp="1578742778041" />
+    <state width="1864" height="337" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1579500386201" />
+    <state width="1864" height="337" key="GridCell.Tab.1.bottom" timestamp="1579500386202">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="337" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1579500386202" />
+    <state width="1864" height="337" key="GridCell.Tab.1.center" timestamp="1579500386202">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="337" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1579500386202" />
+    <state width="1864" height="337" key="GridCell.Tab.1.left" timestamp="1579500386201">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="337" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1579500386201" />
+    <state width="1864" height="337" key="GridCell.Tab.1.right" timestamp="1579500386202">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1864" height="337" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1579500386202" />
+    <state x="434" y="188" key="SettingsEditor" timestamp="1579497744903">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="434" y="188" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1579497744903" />
+    <state x="488" y="198" width="934" height="706" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579498436462">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="488" y="198" width="934" height="706" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1579498436462" />
+  </component>
+</project>
