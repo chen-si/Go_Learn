@@ -6,9 +6,9 @@ import (
 )
 
 type Person struct{
-	Name string
-	Age int
-	Sex string
+	Name string//field
+	Age int//field
+	Sex string//field
 }
 
 func (p Person) PrintInfo(){
@@ -25,7 +25,11 @@ func (p Person) Hello(teacher string,grade int) (string,error){
 func main() {
 	p := Person{"liu",20,"man"}
 
-	v := reflect.ValueOf(p)
+	hello(p)
+}
+
+func hello(i interface{}){
+	v := reflect.ValueOf(i)
 
 	for i := 0; i < v.NumField() ;i++{
 		fmt.Printf("%T   ",v.Field(i))

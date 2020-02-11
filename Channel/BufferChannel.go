@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	ch := make(chan string, 4)
+	ch := make(chan string, 10)
 	go sendData(ch)
 
 	for {

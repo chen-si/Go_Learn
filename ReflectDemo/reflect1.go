@@ -12,7 +12,7 @@ type Person1 struct{
 }
 
 func main() {
-	var f = 19.6
+	var f = 19.6 //float64
 	v :=reflect.ValueOf(f)
 	t :=reflect.TypeOf(f)
 

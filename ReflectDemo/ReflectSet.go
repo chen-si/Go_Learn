@@ -13,7 +13,8 @@ func main() {
 	NewValue := v.Elem()
 
 	fmt.Println(NewValue.CanSet())
-	NewValue.SetFloat(16.5)
+	//NewValue.SetFloat(16.5)
+	NewValue.Set(reflect.ValueOf(15.2))
 
 	fmt.Println(f)
 

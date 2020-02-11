@@ -29,7 +29,14 @@ func fun1(){
 func main() {
 	p := Person2{"liu",20,"man"}
 
-	v := reflect.ValueOf(p)
+	hello(p)
+
+}
+
+func hello(i interface{}){
+
+	v := reflect.ValueOf(i)
+	v.Type()
 
 	MethodValue1 := v.MethodByName("PrintInfo")
 
@@ -38,11 +45,11 @@ func main() {
 	MethodValue2 := v.MethodByName("Hello")
 	CallValue2 := []reflect.Value{reflect.ValueOf("zen"),reflect.ValueOf(100)}
 
- 	ResultValue := MethodValue2.Call(CallValue2)
+	ResultValue := MethodValue2.Call(CallValue2)
 
- 	fmt.Println(ResultValue)
+	fmt.Println(ResultValue)
 
- 	FuncValue := reflect.ValueOf(fun1)
+	FuncValue := reflect.ValueOf(fun1)
 
- 	FuncValue.Call(nil)
+	FuncValue.Call(nil)
 }

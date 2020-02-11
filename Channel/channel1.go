@@ -21,7 +21,7 @@ func main() {
 
 func fun1(ch chan int){
 	fmt.Println("使用通道发送数据")
-	ch <- 100
+	//ch <- 100
 }
 
 func fun2(ch chan int){

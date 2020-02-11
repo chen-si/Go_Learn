@@ -10,7 +10,7 @@ func main() {
 	go SendData(ch1)
 	for v := range ch1{
 		time.Sleep(1*time.Second)
-		fmt.Println("接收到的数据为",v)
+		fmt.Println("                接收到的数据为",v)
 	}
 
 	ch2 := make(chan int)
@@ -26,11 +26,13 @@ func SendData(ch chan<- int){
 	for i := 1;i<= 10 ;i++{
 		ch <- i
 	}
+	//data := <- ch
 	close(ch)
 }
 
 func RecieveData(ch <-chan int){
 	fmt.Println("接收数据的单向通道")
  	data := <-ch
+ 	//ch <- 21100
  	fmt.Println("接收到的数据为",data)
 }

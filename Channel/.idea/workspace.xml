@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="287caa14-df92-4946-998b-53aaa7179fed" name="Default Changelist" comment="" />
+    <list default="true" id="287caa14-df92-4946-998b-53aaa7179fed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatSystem/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatSystem/.idea/ChatSystem.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatSystem/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatSystem/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatSystem/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatSystem/Client/login.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatSystem/Client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Redis_Go/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Redis_Go/.idea/Redis_Go.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Redis_Go/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Redis_Go/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Redis_Go/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Redis_Go/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Redis_Go/GoWithRedis.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Redis_Go/RedisPool.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReflectDemo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../github.com/garyburd/redigo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BufferChannel.go" beforeDir="false" afterPath="$PROJECT_DIR$/BufferChannel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timer.go" beforeDir="false" afterPath="$PROJECT_DIR$/Timer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/channel1.go" beforeDir="false" afterPath="$PROJECT_DIR$/channel1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/close.go" beforeDir="false" afterPath="$PROJECT_DIR$/close.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/one_way_channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/one_way_channel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/select.go" beforeDir="false" afterPath="$PROJECT_DIR$/select.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReflectDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ReflectDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReflectDemo/FeildandMethod.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ReflectDemo/FeildandMethod.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReflectDemo/ReflectCall.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ReflectDemo/ReflectCall.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReflectDemo/ReflectSet.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ReflectDemo/ReflectSet.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReflectDemo/reflect1.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ReflectDemo/reflect1.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +50,11 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/lib/go-1.10" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WeBsWW25BwfFBFda1GV1XUSAPs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,6 +63,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
@@ -38,35 +75,41 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Go Build.go build Channel">
-    <configuration name="go build BufferChannel.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build Channel (4)">
+    <configuration name="go build Channel (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Channel" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/BufferChannel.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build Channel" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Channel" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/channel1.go" />
+      <filePath value="$PROJECT_DIR$/close.go" />
       <package value="Channel" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build Timer.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build Channel (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Channel" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Timer.go" />
+      <filePath value="$PROJECT_DIR$/BufferChannel.go" />
+      <package value="Channel" />
+      <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build one_way_channel.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build Channel (3)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Channel" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/one_way_channel.go" />
+      <package value="Channel" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build Channel (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Channel" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Timer.go" />
+      <package value="Channel" />
+      <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <configuration name="go build select.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -78,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build Channel" />
+        <item itemvalue="Go Build.go build Channel (4)" />
         <item itemvalue="Go Build.go build select.go" />
-        <item itemvalue="Go Build.go build Timer.go" />
-        <item itemvalue="Go Build.go build one_way_channel.go" />
-        <item itemvalue="Go Build.go build BufferChannel.go" />
+        <item itemvalue="Go Build.go build Channel (3)" />
+        <item itemvalue="Go Build.go build Channel (2)" />
+        <item itemvalue="Go Build.go build Channel (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -110,26 +153,42 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="526" y="69" width="857" height="972" key="#go_build_Channel/0.27.1920.1053@0.27.1920.1053" timestamp="1580455950421" />
-    <state x="743" y="311" width="424" height="480" key="FileChooserDialogImpl" timestamp="1579669767730">
+    <state x="536" y="97" width="837" height="912" key="#go_build_Channel_(1)" timestamp="1580542716188">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="311" width="424" height="480" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1579669767730" />
-    <state width="1850" height="118" key="GridCell.Tab.0.bottom" timestamp="1580456005142">
+    <state x="536" y="97" width="837" height="912" key="#go_build_Channel_(1)/0.27.1920.1053@0.27.1920.1053" timestamp="1580542716188" />
+    <state x="536" y="97" width="837" height="912" key="#go_build_Channel_(2)" timestamp="1580543309132">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1850" height="118" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1580456005142" />
-    <state width="1850" height="118" key="GridCell.Tab.0.center" timestamp="1580456005142">
+    <state x="536" y="97" width="837" height="912" key="#go_build_Channel_(2)/0.27.1920.1053@0.27.1920.1053" timestamp="1580543309132" />
+    <state x="536" y="97" width="837" height="912" key="#go_build_Channel_(3)" timestamp="1580543588111">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1850" height="118" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1580456005142" />
-    <state width="1850" height="118" key="GridCell.Tab.0.left" timestamp="1580456005141">
+    <state x="536" y="97" width="837" height="912" key="#go_build_Channel_(3)/0.27.1920.1053@0.27.1920.1053" timestamp="1580543588111" />
+    <state x="536" y="97" width="837" height="912" key="#go_build_Channel_(4)" timestamp="1580544005603">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1850" height="118" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1580456005141" />
-    <state width="1850" height="118" key="GridCell.Tab.0.right" timestamp="1580456005142">
+    <state x="536" y="97" width="837" height="912" key="#go_build_Channel_(4)/0.27.1920.1053@0.27.1920.1053" timestamp="1580544005603" />
+    <state x="743" y="311" width="556" height="480" key="FileChooserDialogImpl" timestamp="1580533121234">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1850" height="118" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1580456005142" />
+    <state x="743" y="311" width="556" height="480" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1580533121234" />
+    <state width="1852" height="220" key="GridCell.Tab.0.bottom" timestamp="1580547121003">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="220" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1580547121003" />
+    <state width="1852" height="220" key="GridCell.Tab.0.center" timestamp="1580547121001">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="220" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1580547121001" />
+    <state width="1852" height="220" key="GridCell.Tab.0.left" timestamp="1580547121000">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="220" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1580547121000" />
+    <state width="1852" height="220" key="GridCell.Tab.0.right" timestamp="1580547121002">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1852" height="220" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1580547121002" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1579500655284">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

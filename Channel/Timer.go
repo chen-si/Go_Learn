@@ -1,8 +1,8 @@
 package main
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -14,9 +14,9 @@ func main() {
 		fmt.Println(time.Now())
 	}()
 
-	time.Sleep(7*time.Second)
-	/*flag := timer2.Stop()
+	time.Sleep(2*time.Second)
+	flag := timer2.Stop()
 	if flag{
 		fmt.Println("Timer 2 停止了。。。")
-	}*/
+	}
 }
