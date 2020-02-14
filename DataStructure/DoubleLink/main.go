@@ -122,8 +122,8 @@ func DelHeroNode(head *HeroNode, no int) {
 	if temp.next != nil {
 		temp.next.pre = temp.pre
 	}
-	temp.next = nil
-	temp.pre = nil
+	// temp.next = nil
+	// temp.pre = nil
 }
 
 func main() {
