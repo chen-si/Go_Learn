@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+//JavaScript Object Notation
+
 type Monster struct{
 	Name string
 	Age int

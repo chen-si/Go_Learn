@@ -57,5 +57,4 @@ func mains() {
 	unserializeStruct()
 	unserializeMap()
 	unserializeSlice()
-
 }

@@ -20,7 +20,7 @@ const (
 //Message 的一般类型
 type Message struct {
 	Type string `json:"type"` //消息类型
-	Data string `json:"date"` //消息内容
+	Data string `json:"data"` //消息内容
 }
 
 //登录消息

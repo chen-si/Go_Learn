@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func main() {
+func main() {//127.0.0.1
 	conn,err := net.Dial("tcp","localhost:8888")
 	if err != nil{
 		fmt.Println("conn error:",err)

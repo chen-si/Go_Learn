@@ -8,6 +8,7 @@ import (
 )
 
 type SmsProcess struct {
+	
 }
 
 //发送群聊消息

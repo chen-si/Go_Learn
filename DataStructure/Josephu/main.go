@@ -58,8 +58,52 @@ func ShowBoy(first *Boy) {
 	fmt.Println()
 }
 
-func main() {
-	first := AddBoy(5)
+//分析思路
+//1、编写一个函数，PlayGame(first *Boy,startNo int,countNum int)
+//2、最后我们使用一个算法在环形链表中留下最后一个人
+func PlayGame(first *Boy, startNo int, countNum int) {
+	//2、空链表单独处理
+	if first.next == nil {
+		fmt.Println("空的链表，没有小孩")
+		return
+	}
+	//留一个，判断startNo <= 小孩的总数
+	//2、需要定义一个辅助指针，帮助我们删除小孩
 
+	tail := first
+	//3、让tail指向环形链表的最后一个小孩 //帮助我们删除小孩
+	for {
+		if tail.next == first { //说明tail到了最后的小孩
+			break
+
+		}
+		tail = tail.next
+	}
+	//4、让first移动到startNo
+	for i := 1; i <= startNo-1; i++ {
+		first = first.next
+		tail = tail.next
+	}
+	//5、开始数countNum 然后就删除first指向的小孩
+	for {
+		//开始数countNum-1次
+		for i := 1; i <= countNum-1; i++ {
+			first = first.next
+			tail = tail.next
+		}
+		fmt.Printf("小孩编号为%d 出圈 \n", first.no)
+		//删除first指向的小孩
+		first = first.next
+		tail.next = first
+		//判断如果tail == first 说明圈中只有一个小孩了
+		if tail == first {
+			break
+		}
+	}
+	fmt.Printf("小孩编号为%d 出圈 \n", first.no)
+}
+func main() {
+	first := AddBoy(500)
 	ShowBoy(first)
+	PlayGame(first, 20, 31)
 }

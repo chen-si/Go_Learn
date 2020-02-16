@@ -21,11 +21,11 @@ func main() {
 	//pool.Close()
 	conn := pool.Get()
 	defer pool.Close()
-	_,err := conn.Do("HMSet","User1","name","liu","age",20,"sex","man")
+	_,err := conn.Do("HMSet","User2","name","liu","age",20,"sex","man")
 	if err != nil{
 		fmt.Println("HMSet error:",err)
 	}
-	s,err := redis.Strings(conn.Do("HMGet","User1","name","age","sex"))
+	s,err := redis.Strings(conn.Do("HMGet","User2","name","age","sex"))
 	if err != nil{
 		fmt.Println("HMGet error:",err)
 	}else{
