@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 //插入排序
 func InsertSort(arr []int) {
@@ -16,7 +20,16 @@ func InsertSort(arr []int) {
 }
 
 func main() {
-	arr := []int{1, 5, 61, 86, 34, 48, 54, 45, 98, 100}
+	rand.Seed(time.Now().Unix())
+	arr := make([]int, 2048)
+	for i := 0; i < 2048; i++ {
+		n := rand.Intn(10000)
+		arr = append(arr, n)
+	}
+
+	t1 := time.Now().UnixNano()
+
 	InsertSort(arr)
-	fmt.Println(arr)
+	t2 := time.Now().UnixNano()
+	fmt.Println("排序总耗时：", t2-t1, "纳秒")
 }

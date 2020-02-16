@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 //编写函数SelectSort 完成排序
 func SelectSort(arr []int) {
@@ -19,8 +23,16 @@ func SelectSort(arr []int) {
 
 func main() {
 	//定义一个数组
-	arr := []int{10, 34, 19, 100, 80, 64, 56}
-	SelectSort(arr)
+	rand.Seed(time.Now().Unix())
+	arr := make([]int, 2048)
+	for i := 0; i < 2048; i++ {
+		n := rand.Intn(10000)
+		arr = append(arr, n)
+	}
 
-	fmt.Println(arr)
+	t1 := time.Now().UnixNano()
+
+	SelectSort(arr)
+	t2 := time.Now().UnixNano()
+	fmt.Println("排序总耗时：", t2-t1, "纳秒")
 }

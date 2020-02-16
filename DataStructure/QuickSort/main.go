@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 //left 表示数组左边的小标
 //right 表示数组右边的下表
@@ -48,7 +52,16 @@ func QuickSort(left int, right int, arr []int) {
 }
 
 func main() {
-	arr := []int{1, -56, 48, 4, 95, -72, 61, -34, 17, 46}
+	rand.Seed(time.Now().Unix())
+	arr := make([]int, 2048)
+	for i := 0; i < 2048; i++ {
+		n := rand.Intn(10000)
+		arr = append(arr, n)
+	}
+
+	t1 := time.Now().UnixNano()
 	QuickSort(0, len(arr)-1, arr)
-	fmt.Println(arr)
+	t2 := time.Now().UnixNano()
+	fmt.Println("排序总耗时：", t2-t1, "纳秒")
+	//fmt.Println(arr)
 }
