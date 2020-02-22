@@ -22,5 +22,5 @@ func main() {
 		ReadTimeout: 2 * time.Second,
 	}
 	err := server.ListenAndServe()
-	fmt.Println(err)
+	fmt.Println(err )
 }
