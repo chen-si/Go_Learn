@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bookstore/controller"
 	"net/http"
 	"text/template"
 )
@@ -17,8 +18,13 @@ func main() {
 	//设置处理静态资源
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("views/static"))))
 	http.Handle("/pages/", http.StripPrefix("/pages/", http.FileServer(http.Dir("views/pages"))))
-
+	//主页
 	http.HandleFunc("/main", IndexHandler)
+	//登录
+	http.HandleFunc("/login", controller.Login)
+	//注册
+	http.HandleFunc("/regist", controller.Regist)
+
 
 	http.ListenAndServe(":8080", nil)
 }

@@ -23,5 +23,5 @@ func testRegister(t *testing.T) {
 }
 
 func testSaveUser(t *testing.T) {
-	SaveUser("admin2", "123456", "admin@liu.com")
+	SaveUser("admin3", "123456", "admin@liu.com")
 }
