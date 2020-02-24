@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        {{range .}}
+            {{.}}<br>
+            <a href="#">{{.LastName}}</a><br>
+        {{else}}
+            条件不满足 false
+        {{end}}
+    </body>
+</html>

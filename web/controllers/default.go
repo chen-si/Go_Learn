@@ -13,6 +13,7 @@ func (c *MainController) Get() {
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.TplName = "index.tpl"
 }
+
 func (c *MainController) Post() {
 	c.Ctx.WriteString("this is method post")
 }
