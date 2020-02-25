@@ -3,6 +3,7 @@ package dao
 import (
 	"bookstore/model"
 	"bookstore/utils"
+	"strconv"
 )
 
 //GetBooks 获取数据库中所有图书
@@ -60,9 +61,55 @@ func UpdateBook(b *model.Book) error {
 	//sql
 	sqlStr := "update books set title=?,author=?,price=?,sales=?,stock=? where id=?"
 	//执行
-	_ ,err := utils.Db.Exec(sqlStr,b.Title,b.Author,b.Price,b.Sales,b.Stock,b.ID)
-	if err != nil{
+	_, err := utils.Db.Exec(sqlStr, b.Title, b.Author, b.Price, b.Sales, b.Stock, b.ID)
+	if err != nil {
 		return err
 	}
 	return nil
+}
+
+//GetPageBooks 获取带分页的图书信息
+func GetPageBooks(pageNo string)(*model.Page,error) {
+	//将PageNo转化为int64类型
+	iPageNo, err := strconv.ParseInt(pageNo, 10, 64)
+	if err != nil {
+		return nil,err
+	}
+	//获取数据库中图书的总数
+	sqlStr := "select count(*) from books"
+	var totalRecord int64
+	//执行
+	row := utils.Db.QueryRow(sqlStr)
+	row.Scan(&totalRecord)
+
+	//设置每页显示4条记录
+	var pageSize int64 = 4
+	//获取总页数
+	var totalPageNo int64
+	if totalRecord%pageSize == 0 {
+		totalPageNo = totalRecord / pageSize
+	} else {
+		totalPageNo = totalRecord/pageSize + 1
+	}
+
+	sqlStr2 := "select id,title,author,price,sales,stock,img_path from books limit ?,?"
+	rows, err := utils.Db.Query(sqlStr2, (iPageNo-1)*pageSize, pageSize)
+	if err != nil {
+		return nil,err
+	}
+	var books []*model.Book
+	for rows.Next() {
+		book := &model.Book{}
+		rows.Scan(&book.ID, &book.Title, &book.Author, &book.Price, &book.Sales, &book.Stock, &book.ImgPath)
+		books = append(books,book)
+	}
+
+	page := &model.Page{
+		Books:books,
+		PageNo:iPageNo,
+		PageSize:pageSize,
+		TotalPageNo:totalPageNo,
+		Totalrecord:totalRecord,
+	}
+	return page,nil
 }
