@@ -3,21 +3,65 @@ package controller
 import (
 	"bookstore/dao"
 	"bookstore/model"
+	"fmt"
 	"html/template"
 	"net/http"
 	"strconv"
 )
 
+//去首页
+func IndexHandler(w http.ResponseWriter, r *http.Request) {
+	//获取页码
+	pageNo := r.FormValue("pageNo")
+	if pageNo == "" {
+		pageNo = "1"
+	}
+	//调用bookdao中得到带分页图书的函数
+	page, _ := dao.GetPageBooks(pageNo)
+	//解析模板
+	t := template.Must(template.ParseFiles("views/index.html"))
+
+	t.Execute(w, page)
+}
+
 func GetPageBooks(w http.ResponseWriter, r *http.Request) {
 	//获取页码
 	pageNo := r.FormValue("pageNo")
-	if pageNo == ""{
+	if pageNo == "" {
 		pageNo = "1"
 	}
 	//调用bookdao中得到带分页图书的函数
 	page, _ := dao.GetPageBooks(pageNo)
 	//解析模板文件
 	t := template.Must(template.ParseFiles("views/pages/manager/book_manager.html"))
+	//执行
+	t.Execute(w, page)
+
+}
+
+func GetPageBooksByPrice(w http.ResponseWriter, r *http.Request) {
+	//获取页码
+	pageNo := r.FormValue("pageNo")
+	if pageNo == "" {
+		pageNo = "1"
+	}
+	//获取价格范围
+	minPrice := r.FormValue("min")
+	maxPrice := r.FormValue("max")
+	var page *model.Page
+	if minPrice == "" && maxPrice == "" {
+		//调用bookdao中得到带分页图书的函数
+		page, _ = dao.GetPageBooks(pageNo)
+	} else {
+		//调用bookdao中得到带分页图书的函数
+		page, _ = dao.GetPageBooksByPrice(pageNo, minPrice, maxPrice)
+		//将价格范围设置到page中
+		page.MinPrice = minPrice
+		page.MaxPrice = maxPrice
+	}
+	fmt.Println(page)
+	//解析模板文件
+	t := template.Must(template.ParseFiles("views/index.html"))
 	//执行
 	t.Execute(w, page)
 
