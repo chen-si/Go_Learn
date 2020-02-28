@@ -8,6 +8,8 @@ type Page struct {
 	Totalrecord int64   //总记录数 查询数据库得到
 	MinPrice    string
 	MaxPrice    string
+	IsLogin     bool
+	Username 	string
 }
 
 //IsHasPrev

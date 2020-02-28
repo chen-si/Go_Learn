@@ -10,11 +10,13 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("views/static"))))
 	http.Handle("/pages/", http.StripPrefix("/pages/", http.FileServer(http.Dir("views/pages"))))
 	//主页
-	http.HandleFunc("/main", controller.IndexHandler)
+	http.HandleFunc("/main", controller.GetPageBooksByPrice)
 	//登录
 	http.HandleFunc("/login", controller.Login)
 	//注册
 	http.HandleFunc("/regist", controller.Regist)
+	//注销
+	http.HandleFunc("/logout", controller.Logout)
 	//通过Ajax请求验证用户名是否可用
 	http.HandleFunc("/checkUserName", controller.CheckUserName)
 	//获取所有图书

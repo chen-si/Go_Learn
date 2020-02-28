@@ -3,7 +3,6 @@ package controller
 import (
 	"bookstore/dao"
 	"bookstore/model"
-	"fmt"
 	"html/template"
 	"net/http"
 	"strconv"
@@ -59,12 +58,18 @@ func GetPageBooksByPrice(w http.ResponseWriter, r *http.Request) {
 		page.MinPrice = minPrice
 		page.MaxPrice = maxPrice
 	}
-	fmt.Println(page)
+	//调用IsLogin函数判断是否已经登录
+	flag, username := dao.IsLogin(r)
+	if flag {
+		//已经登录设置page和Username中的字段
+		page.IsLogin = true
+		page.Username = username
+	}
+
 	//解析模板文件
 	t := template.Must(template.ParseFiles("views/index.html"))
 	//执行
 	t.Execute(w, page)
-
 }
 
 // func GetBooks(w http.ResponseWriter, r *http.Request) {
