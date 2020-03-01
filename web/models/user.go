@@ -4,7 +4,9 @@ import (
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"
 )
+
 var db orm.Ormer
+
 //由model这个名字叫UserInfo 操作的表确实是user_info
 type UserInfo struct {
 	Id       int64

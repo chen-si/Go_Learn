@@ -33,6 +33,7 @@ func main() {
 	http.HandleFunc("/toupdateBookPage", controller.ToUpdateBookPage)
 	//更新或添加图书
 	http.HandleFunc("/updateOrAddBook", controller.UpdateOrAddBook)
-
+	//添加图书到购物车
+	http.HandleFunc("/addBook2Cart", controller.AddBook2Cart)
 	http.ListenAndServe(":8080", nil)
 }
