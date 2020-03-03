@@ -4,6 +4,7 @@ import (
 	"bookstore/model"
 	"fmt"
 	"testing"
+	"time"
 )
 
 func TestMain(m *testing.M) {
@@ -130,14 +131,16 @@ func testGetSession(t *testing.T) {
 	fmt.Println(sess)
 }
 
-func TestCart(t *testing.T) {
-	fmt.Println("测试购物车相关函数")
-	// t.Run("测试添加购物车", testAddCart)
-	// t.Run("测试根据图书id获取购物项", testGetCartItemByBookID)
-	// t.Run("测试根据购物车id获取所有购物项", testGetCartItemsByCartID)
-	//t.Run("测试根据用户id获取购物车", testGetCartByUserID)
-	t.Run("测试根据图书id和购物车id以及图书的数量更新购物项", testUpdateBookCount)
-}
+// func TestCart(t *testing.T) {
+// 	fmt.Println("测试购物车相关函数")
+// 	// t.Run("测试添加购物车", testAddCart)
+// 	// t.Run("测试根据图书id获取购物项", testGetCartItemByBookID)
+// 	// t.Run("测试根据购物车id获取所有购物项", testGetCartItemsByCartID)
+// 	//t.Run("测试根据用户id获取购物车", testGetCartByUserID)
+// 	//t.Run("测试根据图书id和购物车id以及图书的数量更新购物项", testUpdateBookCount)
+// 	//t.Run("测试根据购物车id删除购物车", testDeleteCartByCartID)
+// 	t.Run("测试根据购物项id删除购物项", testDeleteCartItemByID)
+// }
 
 func testAddCart(t *testing.T) {
 	//设置要买的第一本数
@@ -202,7 +205,56 @@ func testGetCartByUserID(t *testing.T) {
 	}
 }
 
-func testUpdateBookCount(t *testing.T) {
-	err := UpdateBookCount(15, 1, "66668888")
+// func testUpdateBookCount(t *testing.T) {
+// 	err := UpdateBookCount(15, 1, "66668888")
+// 	fmt.Println(err)
+// }
+
+func testDeleteCartByCartID(t *testing.T) {
+	DeleteCartByCartID("58b291f0-db22-4073-4930-816959072bb9")
+}
+
+func testDeleteCartItemByID(t *testing.T) {
+	err := DeleteCartItemByID("3")
 	fmt.Println(err)
+}
+
+func TestOrder(t *testing.T) {
+	fmt.Println("测试订单相关函数")
+	t.Run("测试添加订单和订单项", testAddOrder)
+}
+func testAddOrder(t *testing.T) {
+	//创建订单
+	order := &model.Order{
+		OrderID:     "13811118888",
+		CreateTime:  time.Now().Format("2006-01-02 15:04:05"),
+		TotalCount:  2,
+		TotalAmount: 400,
+		State:       0,
+		UserID:      1,
+	}
+	//创建订单项
+	orderItem := &model.OrderItem{
+		Count:   1,
+		Amount:  300,
+		Title:   "三国演义",
+		Author:  "罗贯中",
+		Price:   300,
+		ImgPath: "/static/img/default.jpg",
+		OrderID: "13811118888",
+	}
+	orderItem2 := &model.OrderItem{
+		Count:   1,
+		Amount:  100,
+		Title:   "西游记",
+		Author:  "吴承恩",
+		Price:   100,
+		ImgPath: "/static/img/default.jpg",
+		OrderID: "13811118888",
+	}
+	//保存订单
+	AddOrder(order)
+	//保存订单项
+	AddOrderItem(orderItem)
+	AddOrderItem(orderItem2)
 }

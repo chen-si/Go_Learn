@@ -43,11 +43,24 @@ func GetCartByUserID(userID int) (*model.Cart, error) {
 }
 
 //UpdateCart 更新图书中图书的数量和金额
-func UpdateCart(cart *model.Cart)error{
+func UpdateCart(cart *model.Cart) error {
 	sqlStr := "update carts set total_count = ?,total_amount = ? where id = ?"
-	_,err := utils.Db.Exec(sqlStr,cart.GetTotalCount(),cart.GetTotalAmount(),cart.CartID)
-	if err != nil{
+	_, err := utils.Db.Exec(sqlStr, cart.GetTotalCount(), cart.GetTotalAmount(), cart.CartID)
+	if err != nil {
 		return err
 	}
 	return nil
+}
+
+//DeleteCartByCartID 根据购物车ID删除购物车
+func DeleteCartByCartID(cartID string) error {
+	//删除购物车之前应删除所有的购物项
+	err := DeleteCartItemsByCartID(cartID)
+	if err != nil {
+		return err
+	}
+
+	sqlStr := "delete from carts where id = ?"
+	_, err = utils.Db.Exec(sqlStr, cartID)
+	return err
 }

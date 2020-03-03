@@ -6,6 +6,8 @@ import (
 	"bookstore/utils"
 	"fmt"
 	"net/http"
+	"strconv"
+	"text/template"
 )
 
 //AddBook2Cart 添加图书到购物车
@@ -39,7 +41,7 @@ func AddBook2Cart(w http.ResponseWriter, r *http.Request) {
 						//将当前购物项中的图书数量加一
 						v.Count++
 						//将数据库中该购物项更新
-						dao.UpdateBookCount(v.Count, v.Book.ID, cart.CartID)
+						dao.UpdateBookCount(v)
 					}
 				}
 			} else {
@@ -86,4 +88,99 @@ func AddBook2Cart(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("请先登录！"))
 	}
 
+}
+
+//GetCartInfo  根据用户id获取购物车信息
+func GetCartInfo(w http.ResponseWriter, r *http.Request) {
+	_, session := dao.IsLogin(r)
+	//获取用户id
+	userID := session.UserID
+	//根据用户ID从数据库中获取对应的购物车
+	cart, _ := dao.GetCartByUserID(userID)
+
+	if cart != nil {
+		//设置用户名
+		session.Cart = cart
+		//证明数据库有此用户的购物车
+		//解析模板
+		t := template.Must(template.ParseFiles("views/pages/cart/cart.html"))
+		t.Execute(w, session)
+	} else {
+		//该用户还没有购物车
+		t := template.Must(template.ParseFiles("views/pages/cart/cart.html"))
+		t.Execute(w, session)
+	}
+}
+
+//DeleteCart 删除购物车
+func DeleteCart(w http.ResponseWriter, r *http.Request) {
+	cartID := r.FormValue("cartId")
+	err := dao.DeleteCartByCartID(cartID)
+	if err != nil {
+		fmt.Println(err)
+	}
+	//调用GetCartInfo函数再次查询购物车信息
+	GetCartInfo(w, r)
+}
+
+//DeleteCartItem 删除购物项
+func DeleteCartItem(w http.ResponseWriter, r *http.Request) {
+	cartItemID := r.FormValue("cartItemId")
+	//将购物项的id转换为int64
+	icartItemID, _ := strconv.ParseInt(cartItemID, 10, 64)
+	//获取session
+	_, session := dao.IsLogin(r)
+	UserID := session.UserID
+	//获取该用户的购物车
+	cart, _ := dao.GetCartByUserID(UserID)
+	//获取购物车中的购物项
+	cartItems := cart.CartItems
+	//遍历得到每一个购物项
+	for k, v := range cartItems {
+		//寻找要删除的购物项
+		if icartItemID == v.CartItemID {
+			//这个就是我们要删除的购物项
+			//将当前的购物项从切片中移除
+			cartItems = append(cartItems[:k], cartItems[k+1:]...)
+			//将当前购物项从数据库中移除
+			dao.DeleteCartItemByID(cartItemID)
+		}
+	}
+	cart.CartItems = cartItems
+	//更新购物车中的图书的总数量和总金额
+	dao.UpdateCart(cart)
+
+	GetCartInfo(w, r)
+}
+
+//UpdateCartItem 更新购物项
+func UpdateCartItem(w http.ResponseWriter, r *http.Request) {
+	cartItemID := r.FormValue("cartItemId")
+	//将购物项的id转换为int64
+	icartItemID, _ := strconv.ParseInt(cartItemID, 10, 64)
+	//获取用户输入的图书数量
+	bookCount := r.FormValue("bookCount")
+	ibookCount, _ := strconv.ParseInt(bookCount, 10, 64)
+	//获取session
+	_, session := dao.IsLogin(r)
+	UserID := session.UserID
+	//获取该用户的购物车
+	cart, _ := dao.GetCartByUserID(UserID)
+	//获取购物车中的购物项
+	cartItems := cart.CartItems
+	//遍历得到每一个购物项
+	for _, v := range cartItems {
+		//寻找要更新的购物项
+		if icartItemID == v.CartItemID {
+			//这个就是我们要更新的购物项
+			//将当前的购物项从切片中移除
+			v.Count = ibookCount
+			//更新数据库中该购物项的图书
+			dao.UpdateBookCount(v)
+		}
+	}
+	//更新购物车中的图书的总数量和总金额
+	dao.UpdateCart(cart)
+
+	GetCartInfo(w, r)
 }
