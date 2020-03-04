@@ -64,3 +64,4 @@ func DeleteCartByCartID(cartID string) error {
 	_, err = utils.Db.Exec(sqlStr, cartID)
 	return err
 }
+

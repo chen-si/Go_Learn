@@ -9,3 +9,18 @@ type Order struct {
 	State       int64   //0 未发货 1 已发货 2交易完成
 	UserID      int64   //订单的所属用户
 }
+
+//是否发货
+func (order *Order) NoSend() bool {
+	return order.State == 0
+}
+
+//已发货
+func (order *Order) SendComplete() bool {
+	return order.State == 1
+}
+
+//交易完成
+func (order *Order) Complete() bool {
+	return order.State == 2
+}

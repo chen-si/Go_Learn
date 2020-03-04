@@ -221,7 +221,11 @@ func testDeleteCartItemByID(t *testing.T) {
 
 func TestOrder(t *testing.T) {
 	fmt.Println("测试订单相关函数")
-	t.Run("测试添加订单和订单项", testAddOrder)
+	//t.Run("测试添加订单和订单项", testAddOrder)
+	//t.Run("测试获取所有订单", testGetOrders)
+	//t.Run("测试根据订单ID获取所有订单项", testGetOrderItems)
+	//t.Run("测试获取我的订单", testGetMyOrder)
+	t.Run("测试更新订单状态", testUpdateOrderState)
 }
 func testAddOrder(t *testing.T) {
 	//创建订单
@@ -257,4 +261,32 @@ func testAddOrder(t *testing.T) {
 	//保存订单项
 	AddOrderItem(orderItem)
 	AddOrderItem(orderItem2)
+}
+
+func testGetOrders(t *testing.T) {
+	orders, err := GetOrders()
+	fmt.Println(err)
+	for _, v := range orders {
+		fmt.Println(v)
+	}
+}
+
+func testGetOrderItems(t *testing.T) {
+	orderItems, err := GetOrderItemsByOrderID("ac4e312e-e99c-4491-5be2-2ab06d9d0787")
+	fmt.Println(err)
+	for _, v := range orderItems {
+		fmt.Println(v)
+	}
+}
+
+func testGetMyOrder(t *testing.T) {
+	orders, err := GetMyOrders(6)
+	fmt.Println(err)
+	for _, v := range orders {
+		fmt.Println(v)
+	}
+}
+func testUpdateOrderState(t *testing.T) {
+	err := UpdateOrderState("ac4e312e-e99c-4491-5be2-2ab06d9d0787", 1)
+	fmt.Println(err)
 }
