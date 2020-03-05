@@ -2,24 +2,24 @@ package main
 
 import (
 	"fmt"
-	"time"
+	//"time"
 )
 
-func main() {
-	ch1 := make(chan int)
-	go SendData(ch1)
-	for v := range ch1{
-		time.Sleep(1*time.Second)
-		fmt.Println("                接收到的数据为",v)
-	}
+// func main() {
+// 	ch1 := make(chan int)
+// 	go SendData(ch1)
+// 	for v := range ch1{
+// 		time.Sleep(1*time.Second)
+// 		fmt.Println("                接收到的数据为",v)
+// 	}
 
-	ch2 := make(chan int)
-	go RecieveData(ch2)
-	ch2 <- 99
+// 	ch2 := make(chan int)
+// 	go RecieveData(ch2)
+// 	ch2 <- 99
 
-	fmt.Println("main...over...")
+// 	fmt.Println("main...over...")
 
-}
+// }
 
 func SendData(ch chan<- int){
 	fmt.Println("发送数据的单向通道")

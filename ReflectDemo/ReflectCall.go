@@ -1,55 +1,55 @@
-package main
+// package main
 
-import (
-	"fmt"
-	"reflect"
-)
+// import (
+// 	"fmt"
+// 	"reflect"
+// )
 
-type Person2 struct {
-	Name string
-	Age  int
-	Sex  string
-}
+// type Person2 struct {
+// 	Name string
+// 	Age  int
+// 	Sex  string
+// }
 
-func (p Person2) PrintInfo(){
-	fmt.Println("Method:PrintInfo")
-	fmt.Printf("name: %s   age: %d   sex: %s\n",p.Name,p.Age,p.Sex)
-}
+// func (p Person2) PrintInfo(){
+// 	fmt.Println("Method:PrintInfo")
+// 	fmt.Printf("name: %s   age: %d   sex: %s\n",p.Name,p.Age,p.Sex)
+// }
 
-func (p Person2) Hello(teacher string,grade int) (string,error){
-	fmt.Println("Method:Hello")
-	fmt.Printf("Teacher :%s   Grade: %d\n",teacher,grade)
-	return "hahahahahahahahaha..........",nil
-}
+// func (p Person2) Hello(teacher string,grade int) (string,error){
+// 	fmt.Println("Method:Hello")
+// 	fmt.Printf("Teacher :%s   Grade: %d\n",teacher,grade)
+// 	return "hahahahahahahahaha..........",nil
+// }
 
-func fun1(){
-	fmt.Println("This is fun1......")
-}
+// func fun1(){
+// 	fmt.Println("This is fun1......")
+// }
 
-func main() {
-	p := Person2{"liu",20,"man"}
+// func main() {
+// 	p := Person2{"liu",20,"man"}
 
-	hello(p)
+// 	hello(p)
 
-}
+// }
 
-func hello(i interface{}){
+// func hello(i interface{}){
 
-	v := reflect.ValueOf(i)
-	v.Type()
+// 	v := reflect.ValueOf(i)
+// 	v.Type()
 
-	MethodValue1 := v.MethodByName("PrintInfo")
+// 	MethodValue1 := v.MethodByName("PrintInfo")
 
-	MethodValue1.Call(nil)
+// 	MethodValue1.Call(nil)
 
-	MethodValue2 := v.MethodByName("Hello")
-	CallValue2 := []reflect.Value{reflect.ValueOf("zen"),reflect.ValueOf(100)}
+// 	MethodValue2 := v.MethodByName("Hello")
+// 	CallValue2 := []reflect.Value{reflect.ValueOf("zen"),reflect.ValueOf(100)}
 
-	ResultValue := MethodValue2.Call(CallValue2)
+// 	ResultValue := MethodValue2.Call(CallValue2)
 
-	fmt.Println(ResultValue)
+// 	fmt.Println(ResultValue)
 
-	FuncValue := reflect.ValueOf(fun1)
+// 	FuncValue := reflect.ValueOf(fun1)
 
-	FuncValue.Call(nil)
-}
+// 	FuncValue.Call(nil)
+// }

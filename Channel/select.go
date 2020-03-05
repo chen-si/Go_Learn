@@ -1,37 +1,37 @@
 package main
 
 import (
-	"fmt"
-	"time"
+	// "fmt"
+	// "time"
 )
 
-func main() {
-	ch1 := make(chan int)
-	ch2 := make(chan int)
+// func main() {
+// 	ch1 := make(chan int)
+// 	ch2 := make(chan int)
 
-	go func() {
-		time.Sleep(3*time.Second)
-		ch1 <- 100
-	}()
-	go func() {
-		time.Sleep(3*time.Second)
-		ch2 <- 100
-	}()
-	//
-	//switch{
-	//case
-	//}
+// 	go func() {
+// 		time.Sleep(3*time.Second)
+// 		ch1 <- 100
+// 	}()
+// 	go func() {
+// 		time.Sleep(3*time.Second)
+// 		ch2 <- 100
+// 	}()
+// 	//
+// 	//switch{
+// 	//case
+// 	//}
 
-	select {
-	case data := <-ch1:
-		fmt.Println("case1可以执行。。,接收到",data)
-	case <-ch2:
-		fmt.Println("case2可以执行。。")
-	case <-time.After(5 * time.Second):
-		fmt.Println("case3执行。。timeout。。。")
-		//default:
-		//	fmt.Println("执行了default。。")
-	}
+// 	select {
+// 	case data := <-ch1:
+// 		fmt.Println("case1可以执行。。,接收到",data)
+// 	case <-ch2:
+// 		fmt.Println("case2可以执行。。")
+// 	case <-time.After(5 * time.Second):
+// 		fmt.Println("case3执行。。timeout。。。")
+// 		//default:
+// 		//	fmt.Println("执行了default。。")
+// 	}
 
 
-}
+// }
