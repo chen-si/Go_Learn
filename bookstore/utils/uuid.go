@@ -10,6 +10,8 @@ import (
 func CreateUUID() (uuid string) {
 	u := new([16]byte)
 	_, err := rand.Read(u[:])
+	// fmt.Println(u)
+	// fmt.Printf("%x\n",u[:])
 	if err != nil {
 		log.Fatalln("Cannot generate UUID", err)
 	}

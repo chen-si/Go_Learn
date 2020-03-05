@@ -4,6 +4,7 @@ import (
 	"bookstore/dao"
 	"bookstore/model"
 	"bookstore/utils"
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -179,8 +180,29 @@ func UpdateCartItem(w http.ResponseWriter, r *http.Request) {
 			dao.UpdateBookCount(v)
 		}
 	}
+
 	//更新购物车中的图书的总数量和总金额
 	dao.UpdateCart(cart)
-
-	GetCartInfo(w, r)
+	cart, _ = dao.GetCartByUserID(UserID)
+	//获取购物车中图书的总数量
+	totalCount := cart.TotalCount
+	//获取购物车总金额
+	totalAmount := cart.TotalAmount
+	//获取购物车中购物项中的金额小计
+	cIs := cart.CartItems
+	var amount float64
+	for _, v := range cIs {
+		if icartItemID == v.CartItemID {
+			//这就是我梦要寻找的购物项
+			amount = v.Amount
+		}
+	}
+	data := model.Data{
+		Amount:      amount,
+		TotalAmount: totalAmount,
+		TotalCount:  totalCount,
+	}
+	json, _ := json.Marshal(data)
+	//响应到客户端
+	w.Write(json)
 }
