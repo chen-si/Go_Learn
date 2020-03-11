@@ -12,7 +12,7 @@ func testIf(w http.ResponseWriter, r *http.Request) {
 	t := template.Must(template.ParseFiles("if.html"))
 	age := 17
 	//执行
-	t.Execute(w, age < 18)
+	t.Execute(w, age < 18) 
 }
 
 //测试 Range

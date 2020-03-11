@@ -30,6 +30,7 @@ func getCookies(w http.ResponseWriter, r *http.Request) {
 	cookie, _ := r.Cookie("user")
 	fmt.Println("得到的Cookie：", cookies, cookie)
 }
+
 func main() {
 	http.HandleFunc("/setCookie", setCookie)
 	http.HandleFunc("/getCookie", getCookies)

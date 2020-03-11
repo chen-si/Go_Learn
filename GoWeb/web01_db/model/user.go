@@ -15,6 +15,7 @@ type User struct {
 
 //AddUser 添加User的方法一
 func (user *User) AddUser() error {
+	//SQL
 	sqlStr := "insert into users(username,password,email) values(?,?,?)"
 	//预编译
 	inStmt, err := utils.Db.Prepare(sqlStr)

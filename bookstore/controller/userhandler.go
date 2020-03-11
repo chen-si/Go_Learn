@@ -16,7 +16,7 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 		cookieValue := cookie.Value
 		//删除数据库中与之对应的Session
 		dao.DeleteSession(cookieValue)
-		//设置cookie失效MaxAge 小于0 表示立即删除cookie
+		//设置cookie失效MaxAge 小于0 表示立即删除cookie =0 永久存在
 		cookie.MaxAge = -1
 		//将修改之后的cookie发送给浏览器
 		http.SetCookie(w, cookie)
@@ -25,7 +25,7 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 	GetPageBooksByPrice(w, r)
 }
 
-//Login处理用户登录的函数
+//Login　处理用户登录的函数
 func Login(w http.ResponseWriter, r *http.Request) {
 	//判断是否已经登录
 	flag, _ := dao.IsLogin(r)
@@ -91,7 +91,6 @@ func Regist(w http.ResponseWriter, r *http.Request) {
 		t := template.Must(template.ParseFiles("views/pages/user/regist_success.html"))
 		t.Execute(w, "")
 	}
-
 }
 
 //CheckUserName 通过发送Ajax请求验证用户名是否可用
